@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Album</title>
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="welcome-box">
+    <h1>VIT Bhopal: A Digital Album</h1>
+    <p>Click and drag the photos to explore. Click any photo to see it larger.</p>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-btn">Play Music 🎵</button>
+  <button id="shuffle-btn">Shuffle Memories 🔀</button>
+
+  <div id="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged view">
+    <p id="lightbox-caption"></p>
+    <a id="download-btn" href="#" download>Download Image</a>
+  </div>
+
+
+  <div class="Container">
+
+    <div class="Picture-video" id="video">
+      <video class="Picture-img-video" src="assets/Video.mp4" controls></video>
+
+      <div class="Picture-note-video">
+        <span> @Rahul Kumar
+          <a class="Network" href="https://www.instagram.com/rahulkr_1623/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </span>
+        <a class="video-download-link" href="assets/Video.mp4" download="VIT-Bhopal-Video.mp4">Download Video</a>
+      </div>
+    </div>
+
+    <div class="Picture portrait">
+      <img class="Picture-img" src="assets/Boys hostel rainbow view.jpg" alt="Rainbow over boys hostel" />
+      <div class="Picture-note"><span>Over the clouds</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Girls hostel block 2.jpg" alt="Sunset over girls hostel" />
+      <div class="Picture-note"><span>Sky on Fire</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Academic block 2.jpg" alt="Academic block 2 construction" />
+      <div class="Picture-note"><span>Under the clouds</span></div>
+    </div>
+
+    <div class="Picture portrait">
+      <img class="Picture-img" src="assets/Boys hostel block 1.jpg" alt="Boys hostel block 1" />
+      <div class="Picture-note"><span>Blocks of memories</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Lion.jpg" alt="VIT Bhopal Lion Statue" />
+      <div class="Picture-note"><span>The Lion</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Boys hostel block 6.jpg" alt="Boys hostel block 6 courtyard" />
+      <div class="Picture-note"><span>Brutalist Beauty</span></div>
+    </div>
+
+    <div class="Picture portrait">
+      <img class="Picture-img" src="assets/Rainbow.jpg" alt="Rainbow over campus" />
+      <div class="Picture-note"><span>Monsoon's spell</span></div>
+    </div>
+
+    <div class="Picture portrait">
+      <img class="Picture-img" src="assets/Evening.jpg" alt="Golden hour sunset on campus" />
+      <div class="Picture-note"><span>Friday's golden glow</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Greenery.jpg" alt="Campus greenery and trees" />
+      <div class="Picture-note"><span>Campus Serenity</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Main Gate.jpg" alt="VIT Bhopal Main Gate" />
+      <div class="Picture-note"><span>Entrance</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Girls block 1.jpg" alt="Girls hostel block 1" />
+      <div class="Picture-note"><span>Girl's Block 1</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Night view.jpg" alt="Campus road at night" />
+      <div class="Picture-note"><span>Under the streetlights</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/AB1.jpg" alt="Academic block 1 with flowers" />
+      <div class="Picture-note"><span>Campus Blooms</span></div>
+    </div>
+
+    <div class="Picture portrait">
+      <img class="Picture-img" src="assets/Evening hour.jpg" alt="Sunset between buildings" />
+      <div class="Picture-note"><span>Sunset Stripes</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Academic block 1.jpg" alt="Full view of Academic Block 1" />
+      <div class="Picture-note"><span>Heart of the campus</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/Back gate.jpg" alt="Campus back gate at sunset" />
+      <div class="Picture-note"><span>6:05 PM</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/rain.jpg" alt="Rainy view through palms" />
+      <div class="Picture-note"><span>Peeking through the palms</span></div>
+    </div>
+
+    <div class="Picture landscape">
+      <img class="Picture-img" src="assets/LC & AR.jpg" alt="LC and AR buildings" />
+      <div class="Picture-note"><span>Glass and Clouds</span></div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <p>&copy; 2025 Made with ❤️ by Rahul</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/rahulkr_1623/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://github.com/Rahul-kr1623" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="http://www.linkedin.com/in/rahulkumar-web" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

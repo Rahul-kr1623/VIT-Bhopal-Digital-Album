@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* --------------------- */
+/* Body & Layout         */
+/* --------------------- */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  color: #fff;
+  background-color: #1a1f2e; /* Modern Navy Blue */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 1; 
+}
+
+/* --------------------- */
+/* Welcome Box (Top)     */
+/* --------------------- */
+
+#welcome-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centered as per your last code */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 1s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+#welcome-box h1 {
+  margin: 0 0 5px 0;
+  font-family: 'Caveat', serif;
+  font-size: 2rem;
+  color: #fff;
+}
+
+#welcome-box p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+#welcome-box.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------- */
+/* Buttons (Music & Shuffle) */
+/* --------------------- */
+
+#shuffle-btn, #music-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+#shuffle-btn:hover, #music-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+#shuffle-btn { right: 20px; }
+#music-btn { left: 20px; }
+
+/* --------------------- */
+/* Footer                */
+/* --------------------- */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker for better visibility */
+  color: #bbb;
+  font-size: 0.8rem;
+  z-index: 0; 
+  backdrop-filter: blur(5px);
+}
+
+#footer p { margin-bottom: 5px; }
+
+.social-links { margin-top: 5px; }
+
+/* FontAwesome Icon Styling */
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff; /* White icons */
+  font-size: 1.5rem; /* Icon size */
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff; /* Blue on hover */
+  transform: scale(1.2);
+}
+
+/* --------------------- */
+/* Lightbox Modal        */
+/* --------------------- */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#lightbox.active { display: flex; }
+
+#lightbox-img {
+  max-width: 90vw;
+  max-height: 75vh;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+#lightbox-caption {
+  font-family: 'Caveat', serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover { color: #aaa; transform: scale(1.1); }
+
+#download-btn {
+  padding: 8px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#download-btn:hover { background: #0056b3; }
+
+/* --------------------- */
+/* Draggable Pictures    */
+/* --------------------- */
+
+.Picture {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid #fff;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  user-select: none;
+  cursor: grab;
+  will-change: transform;
+  transition: transform 0.1s linear; 
+  z-index: 1; 
+}
+
+.Picture:active {
+  cursor: grabbing;
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.Picture-video {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid #fff;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  user-select: none;
+  will-change: transform;
+  z-index: 0; 
+}
+
+/* Sizing */
+.Picture.portrait .Picture-img { width: 350px; height: 420px; }
+.Picture.landscape .Picture-img { width: 450px; height: 300px; }
+.Picture-img { display: block; object-fit: cover; pointer-events: none; }
+
+/* Video Sizing */
+.Picture-img-video {
+  width: 350px;
+  height: 480px;
+  border: 0;
+  display: block;
+  background: #000; /* Black background for video player */
+}
+
+/* Caption Sizing */
+.Picture.portrait .Picture-note { width: 350px; }
+.Picture.landscape .Picture-note { width: 450px; }
+
+.Picture-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Caveat', serif;
+  color: #000;
+}
+
+.Picture-note-video {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Caveat', serif;
+  color: #000;
+}
+
+/* Icon in the video card caption */
+.Network {
+  display: inline-block;
+  padding: 0 5px;
+  color: #E1306C; /* Instagram Color */
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+.Network:hover { transform: scale(1.2); }
+
+.video-download-link {
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
